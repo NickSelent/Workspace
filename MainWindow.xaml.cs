@@ -22,6 +22,11 @@ namespace BobNet
     public partial class MainWindow : Window
     {
         Sweep sweep;
+        DispatcherTimer t = new DispatcherTimer()
+        {
+            Interval = TimeSpan.FromMilliseconds(500)
+        };
+
         public MainWindow()
         {
             InitializeComponent();
@@ -30,10 +35,8 @@ namespace BobNet
         private void MainCanvas_Loaded(object sender, RoutedEventArgs e)
         {
             sweep = new Sweep(MainCanvas, RadarScreen);
-            DispatcherTimer t = new DispatcherTimer()
-            {
-                Interval = TimeSpan.FromMilliseconds(Framejack.Value)
-            };
+            
+            
             t.Tick += FrameTick;
             t.Start();
         }
@@ -41,6 +44,7 @@ namespace BobNet
         private void FrameTick(object sender, EventArgs e)
         {
             sweep.Move();
+            t.Interval = TimeSpan.FromMilliseconds(Framejack.Value);
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

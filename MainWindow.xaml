@@ -14,6 +14,6 @@
 
         <Ellipse x:Name="RadarScreen" Canvas.Top="0" Canvas.Left="0" Fill="Black" Height="250" Width="250" StrokeThickness="1" Stroke="AliceBlue"></Ellipse>
         <Label x:Name="lblFramejack" Content="Framejack" Canvas.Left="223" Canvas.Top="200" FontFamily="Harrington" FontSize="18" FontWeight="Bold" Width="103"></Label>
-        <Slider x:Name="Framejack" Canvas.Left="211" Canvas.Top="222" Width="100" Minimum="1" Maximum="1000" Value="1"></Slider>
+        <Slider x:Name="Framejack" Canvas.Left="211" Canvas.Top="222" Width="100" Minimum="1" Maximum="250" Value="1"></Slider>
     </Canvas>
 </Window>
