@@ -12,8 +12,17 @@
     <Canvas Name="MainCanvas" Loaded="MainCanvas_Loaded">
         <Rectangle Fill="GreenYellow" Height="46" Canvas.Left="150" Stroke="AliceBlue" StrokeThickness="1" Canvas.Top="204" Width="175"></Rectangle>
 
-        <Ellipse x:Name="RadarScreen" Canvas.Top="0" Canvas.Left="0" Fill="Black" Height="250" Width="250" StrokeThickness="1" Stroke="AliceBlue"></Ellipse>
+        <Ellipse x:Name="RadarScreen" Canvas.Top="0" Canvas.Left="0" Fill="Black" Height="250" Width="250" StrokeThickness="1" Stroke="AliceBlue">
+            
+        </Ellipse>
         <Label x:Name="lblFramejack" Content="Framejack" Canvas.Left="223" Canvas.Top="200" FontFamily="Harrington" FontSize="18" FontWeight="Bold" Width="103"></Label>
         <Slider x:Name="Framejack" Canvas.Left="211" Canvas.Top="222" Width="100" Minimum="1" Maximum="250" Value="1"></Slider>
+
+        <Ellipse x:Name="Enemy1" Canvas.Top="18" Canvas.Left="120" Fill="Red" Height="10" Width="10" StrokeThickness="1" Stroke="AliceBlue" ToolTip="Enemy" MouseLeftButtonDown="Enemy1_MouseLeftButtonDown"></Ellipse>
+        <Ellipse x:Name="Enemy2" Canvas.Top="35" Canvas.Left="110" Fill="Red" Height="10" Width="10" StrokeThickness="1" Stroke="AliceBlue" ToolTip="Enemy" MouseLeftButtonDown="Enemy2_MouseLeftButtonDown"/>
+        <Rectangle x:Name="Resources1" Canvas.Top="130" Canvas.Left="5" Fill="Green" Height="10" Width="10" StrokeThickness="1" Stroke="AliceBlue" ToolTip="Resources" MouseLeftButtonDown="Resources1_MouseLeftButtonDown"></Rectangle>
+        <Rectangle x:Name="Resources2" Canvas.Top="145" Canvas.Left="15" Fill="Green" Height="10" Width="10" StrokeThickness="1" Stroke="AliceBlue" ToolTip="Resources" MouseLeftButtonDown="Resources2_MouseLeftButtonDown"></Rectangle>
+        <Rectangle x:Name="Resources3" Canvas.Top="135" Canvas.Left="20" Fill="Green" Height="10" Width="10" StrokeThickness="1" Stroke="AliceBlue" ToolTip="Resources" MouseLeftButtonDown="Resources3_MouseLeftButtonDown"></Rectangle>
+        <Ellipse x:Name="Bob" Canvas.Top="120" Canvas.Left="120" Fill="AliceBlue" Height="10" Width="10" StrokeThickness="1" Stroke="AliceBlue" ToolTip="Bob" MouseLeftButtonDown="Bob_MouseLeftButtonDown"></Ellipse>
     </Canvas>
 </Window>

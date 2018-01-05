@@ -27,6 +27,11 @@ namespace BobNet
             Interval = TimeSpan.FromMilliseconds(500)
         };
 
+        Replicants rWin = new Replicants();
+        Enemy eWin = new Enemy();
+        Resources sWin = new Resources();
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -50,6 +55,56 @@ namespace BobNet
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+
+
+
+        private void Enemy2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (eWin.IsVisible.Equals(false))
+                eWin.Show();
+            else
+                eWin.Hide();
+        }
+
+        private void Enemy1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (eWin.IsVisible.Equals(false))
+                eWin.Show();
+            else
+                eWin.Hide();
+        }
+
+        private void Resources1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (sWin.IsVisible.Equals(false))
+                sWin.Show();
+            else
+                sWin.Hide();
+        }
+
+        private void Resources2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (sWin.IsVisible.Equals(false))
+                sWin.Show();
+            else
+                sWin.Hide();
+        }
+
+        private void Resources3_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (sWin.IsVisible.Equals(false))
+                sWin.Show();
+            else
+                sWin.Hide();
+        }
+
+        private void Bob_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (rWin.IsVisible.Equals(false))
+                rWin.Show();
+            else
+                rWin.Hide();
         }
     }
 }
