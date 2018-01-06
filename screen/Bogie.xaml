@@ -1,11 +1,12 @@
-﻿<Window x:Class="BobNet.Enemy"
+﻿<Window x:Name="BogieDashboard" x:Class="BobNet.screen.Bogie"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BobNet"
+        xmlns:local="clr-namespace:BobNet.screen"
         mc:Ignorable="d"
-        Title="Enemy" Height="300" Width="300">
+        Title="BogieWindow" Height="300" Width="300" Closing="BogieDashboard_Closing" Loaded="BogieDashboard_Loaded">
     <Canvas Height="300" Width="300">
-        <Rectangle Fill="Pink" Height="300" Width="300"></Rectangle></Canvas>
+        <Rectangle Fill="Salmon" Height="300" Width="300"></Rectangle>
+    </Canvas>
 </Window>

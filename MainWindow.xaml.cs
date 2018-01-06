@@ -1,5 +1,9 @@
-﻿using System;
+﻿using BobNet.model;
+using BobNet.screen;
+using BobNet.utility;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+
 
 namespace BobNet
 {
@@ -28,9 +33,8 @@ namespace BobNet
         };
 
         Replicants rWin = new Replicants();
-        Enemy eWin = new Enemy();
+        Bogie eWin = new Bogie();
         Resources sWin = new Resources();
-
 
         public MainWindow()
         {
@@ -106,5 +110,44 @@ namespace BobNet
             else
                 rWin.Hide();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            WindowManager w = new WindowManager();
+            List<ScreenProperties> s = w.LoadData(this.Name);
+
+            if (s.Count > 0)
+            {
+                this.Top = int.Parse(s[0].ScreenTop);
+                this.Left = int.Parse(s[0].ScreenLeft);
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            rWin.Close(); //otherwise the exe hangs around
+            eWin.Close();
+            sWin.Close();
+
+            ScreenProperties s = new ScreenProperties()
+            {
+                ScreenName = this.Name,
+                ScreenTop = this.Top.ToString(),
+                ScreenLeft = this.Left.ToString()
+            };
+            WindowManager w = new WindowManager();
+            w.WriteToXmlFile(s, true);
+
+        }
+
+        
+
+
+
+
+
+
+
+
     }
 }
