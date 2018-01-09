@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BobNet.screen"
         mc:Ignorable="d"
-        Title="BogieWindow" Height="300" Width="300" Closing="BogieDashboard_Closing" Loaded="BogieDashboard_Loaded">
+        Title="BogieWindow" Height="300" Width="300" Closing="BogieDashboard_Closing" Loaded="BogieDashboard_Loaded"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None" WindowStartupLocation="CenterScreen" Icon="../img/skull-68-32.ico">
     <Canvas Height="300" Width="300">
-        <Rectangle Fill="Salmon" Height="300" Width="300"></Rectangle>
+        <Rectangle Fill="Salmon" Height="300" Width="300" RenderTransformOrigin="0.089,0.07"></Rectangle>
+
+        <ListBox x:Name="bogieList" Height="249" Canvas.Left="10" Canvas.Top="41" Width="280">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}" FontSize="20" FontWeight="Bold" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Canvas>
 </Window>

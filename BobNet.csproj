@@ -57,6 +57,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="model\BogieProperties.cs" />
     <Compile Include="model\ScreenProperties.cs" />
     <Compile Include="screen\Bogie.xaml.cs">
       <DependentUpon>Bogie.xaml</DependentUpon>
@@ -68,6 +69,7 @@
       <DependentUpon>Resources.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sweep.cs" />
+    <Compile Include="utility\BogieManager.cs" />
     <Compile Include="utility\WindowManager.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +124,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\skull-68-32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bogie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WindowManager.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

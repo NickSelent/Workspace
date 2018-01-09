@@ -8,7 +8,7 @@
         Title="MainWindow" Height="250" Width="325"
         AllowsTransparency="True"
         Background="Transparent"
-        WindowStyle="None" WindowStartupLocation="CenterScreen" Icon="img/skull-68-32.ico" MouseLeftButtonDown="Window_MouseLeftButtonDown" Loaded="Window_Loaded" Closing="Window_Closing">
+        WindowStyle="None" Icon="img/skull-68-32.ico" MouseLeftButtonDown="Window_MouseLeftButtonDown" Loaded="Window_Loaded" Closing="Window_Closing">
     <Canvas Name="MainCanvas" Loaded="MainCanvas_Loaded">
         <Rectangle Fill="GreenYellow" Height="46" Canvas.Left="150" Stroke="AliceBlue" StrokeThickness="1" Canvas.Top="204" Width="175"></Rectangle>
 

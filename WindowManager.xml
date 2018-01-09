@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Screen>
+    <ScreenName>Radar</ScreenName>
+    <ScreenTop>346</ScreenTop>
+    <ScreenLeft>659</ScreenLeft>
+  </Screen>
+  <Screen>
+    <ScreenName>ReplicantsDashboard</ScreenName>
+    <ScreenTop>40</ScreenTop>
+    <ScreenLeft>298</ScreenLeft>
+  </Screen>
+  <Screen>
+    <ScreenName>BogieDashboard</ScreenName>
+    <ScreenTop>339</ScreenTop>
+    <ScreenLeft>296</ScreenLeft>
+  </Screen>
+  <Screen>
+    <ScreenName>ResourcesDashboard</ScreenName>
+    <ScreenTop>650</ScreenTop>
+    <ScreenLeft>296</ScreenLeft>
+  </Screen>
+</root>

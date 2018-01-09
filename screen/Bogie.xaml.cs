@@ -48,6 +48,12 @@ namespace BobNet.screen
                 this.Top = int.Parse(s[0].ScreenTop);
                 this.Left = int.Parse(s[0].ScreenLeft);
             }
+
+            BogieManager b = new BogieManager();
+            List<BogieProperties> eList = b.LoadData();
+
+            bogieList.ItemsSource = eList;
+
         }
     }
 }
