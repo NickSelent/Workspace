@@ -48,6 +48,16 @@ namespace BobNet.screen
                 this.Top = int.Parse(s[0].ScreenTop);
                 this.Left = int.Parse(s[0].ScreenLeft);
             }
+
+            ResourceManager b = new ResourceManager();
+            List<ResourceProperties> eList = b.LoadData();
+
+            resourceList.ItemsSource = eList;
+        }
+
+        private void ResourcesDashboard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }

@@ -58,6 +58,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="model\BogieProperties.cs" />
+    <Compile Include="model\ReplicantsProperties.cs" />
+    <Compile Include="model\ResourceProperties.cs" />
     <Compile Include="model\ScreenProperties.cs" />
     <Compile Include="screen\Bogie.xaml.cs">
       <DependentUpon>Bogie.xaml</DependentUpon>
@@ -70,6 +72,8 @@
     </Compile>
     <Compile Include="Sweep.cs" />
     <Compile Include="utility\BogieManager.cs" />
+    <Compile Include="utility\ReplicantsManager.cs" />
+    <Compile Include="utility\ResourceManager.cs" />
     <Compile Include="utility\WindowManager.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -127,12 +131,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Bogie.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="WindowManager.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Replicants.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

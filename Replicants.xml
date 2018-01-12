@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Replicants>
+    <Name>Bob</Name>
+    <Stats>346</Stats>
+  </Replicants>
+  <Replicants>
+    <Name>Linus</Name>
+    <Stats>346</Stats>
+  </Replicants>
+  <Replicants>
+    <Name>Bill</Name>
+    <Stats>346</Stats>
+  </Replicants>
+</root>

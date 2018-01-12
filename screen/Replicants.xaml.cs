@@ -48,6 +48,16 @@ namespace BobNet.screen
                 this.Top = int.Parse(s[0].ScreenTop);
                 this.Left = int.Parse(s[0].ScreenLeft);
             }
+
+            ReplicantsManager b = new ReplicantsManager();
+            List<ReplicantsProperties> eList = b.LoadData();
+
+            replicantsList.ItemsSource = eList;
+        }
+
+        private void ReplicantsDashboard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }

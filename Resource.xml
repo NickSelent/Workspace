@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Resource>
+    <Name>Iron Ore Deposits</Name>
+    <Stats>346</Stats>
+  </Resource>
+  <Resource>
+    <Name>Ice</Name>
+    <Stats>346</Stats>
+  </Resource>
+  <Resource>
+    <Name>Rare Earths</Name>
+    <Stats>346</Stats>
+  </Resource>
+</root>

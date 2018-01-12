@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BobNet.screen"
         mc:Ignorable="d"
-        Title="ReplicantsWindow" Height="300" Width="300" Closing="ReplicantsDashboard_Closing" Loaded="ReplicantsDashboard_Loaded">
+        Title="ReplicantsWindow" Height="300" Width="300" Closing="ReplicantsDashboard_Closing" Loaded="ReplicantsDashboard_Loaded"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None" WindowStartupLocation="CenterScreen" Icon="../img/skull-68-32.ico" MouseLeftButtonDown="ReplicantsDashboard_MouseLeftButtonDown">
     <Canvas Height="300" Width="300">
-        <Rectangle Fill="AliceBlue" Height="300" Width="300"></Rectangle>
+        <Rectangle Fill="Blue"  Height="300" Width="300"></Rectangle>
+
+        <ListBox x:Name="replicantsList" Height="290" Canvas.Left="5" Canvas.Top="5" Width="290" Foreground="#FF28FF00" Background="#FF000303">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}" FontSize="10" FontWeight="Bold" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Canvas>
 </Window>

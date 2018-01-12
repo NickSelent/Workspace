@@ -55,5 +55,10 @@ namespace BobNet.screen
             bogieList.ItemsSource = eList;
 
         }
+
+        private void BogieDashboard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }
